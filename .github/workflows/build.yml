@@ -8,6 +8,10 @@ on:
   schedule:
     - cron: 1 12 * * 1
 
+# Build and test jobs do not need repository write permissions.
+permissions:
+  contents: read
+
 env:
 
   # Override OSX architecture detection. Required for CMake versions < 3.19.2.
